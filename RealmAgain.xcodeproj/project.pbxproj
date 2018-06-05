@@ -14,6 +14,14 @@
 		8941920C20C52C770076175B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8941920A20C52C770076175B /* LaunchScreen.storyboard */; };
 		8941921720C52C770076175B /* RealmAgainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8941921620C52C770076175B /* RealmAgainTests.swift */; };
 		8941922220C52C770076175B /* RealmAgainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8941922120C52C770076175B /* RealmAgainUITests.swift */; };
+		8941923120C52DCB0076175B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8941922F20C52DCA0076175B /* Realm.framework */; };
+		8941923220C52DCB0076175B /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8941922F20C52DCA0076175B /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8941923320C52DCB0076175B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8941923020C52DCB0076175B /* RealmSwift.framework */; };
+		8941923420C52DCB0076175B /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8941923020C52DCB0076175B /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8941923620C52E360076175B /* Realm.framework in Sources */ = {isa = PBXBuildFile; fileRef = 8941922F20C52DCA0076175B /* Realm.framework */; };
+		8941923720C52E3A0076175B /* RealmSwift.framework in Sources */ = {isa = PBXBuildFile; fileRef = 8941923020C52DCB0076175B /* RealmSwift.framework */; };
+		8941923D20C52EBC0076175B /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8941923C20C52EBC0076175B /* DBManager.swift */; };
+		89A17EB320C6B593004B694C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A17EB220C6B593004B694C /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +41,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8941923520C52DCB0076175B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8941923420C52DCB0076175B /* RealmSwift.framework in Embed Frameworks */,
+				8941923220C52DCB0076175B /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		894191FE20C52C5E0076175B /* RealmAgain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmAgain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8941920120C52C5E0076175B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +70,10 @@
 		8941921D20C52C770076175B /* RealmAgainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmAgainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8941922120C52C770076175B /* RealmAgainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAgainUITests.swift; sourceTree = "<group>"; };
 		8941922320C52C770076175B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8941922F20C52DCA0076175B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		8941923020C52DCB0076175B /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		8941923C20C52EBC0076175B /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		89A17EB220C6B593004B694C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8941923320C52DCB0076175B /* RealmSwift.framework in Frameworks */,
+				8941923120C52DCB0076175B /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +106,8 @@
 		894191F520C52C5E0076175B = {
 			isa = PBXGroup;
 			children = (
+				8941922F20C52DCA0076175B /* Realm.framework */,
+				8941923020C52DCB0076175B /* RealmSwift.framework */,
 				8941920020C52C5E0076175B /* RealmAgain */,
 				8941921520C52C770076175B /* RealmAgainTests */,
 				8941922020C52C770076175B /* RealmAgainUITests */,
@@ -97,6 +128,7 @@
 		8941920020C52C5E0076175B /* RealmAgain */ = {
 			isa = PBXGroup;
 			children = (
+				89A17EB120C6B580004B694C /* DB */,
 				8941920120C52C5E0076175B /* AppDelegate.swift */,
 				8941920320C52C5E0076175B /* ViewController.swift */,
 				8941920520C52C5E0076175B /* Main.storyboard */,
@@ -125,6 +157,15 @@
 			path = RealmAgainUITests;
 			sourceTree = "<group>";
 		};
+		89A17EB120C6B580004B694C /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				8941923C20C52EBC0076175B /* DBManager.swift */,
+				89A17EB220C6B593004B694C /* Model.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +176,7 @@
 				894191FA20C52C5E0076175B /* Sources */,
 				894191FB20C52C5E0076175B /* Frameworks */,
 				894191FC20C52C5E0076175B /* Resources */,
+				8941923520C52DCB0076175B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8941923D20C52EBC0076175B /* DBManager.swift in Sources */,
+				8941923720C52E3A0076175B /* RealmSwift.framework in Sources */,
+				8941923620C52E360076175B /* Realm.framework in Sources */,
+				89A17EB320C6B593004B694C /* Model.swift in Sources */,
 				8941920420C52C5E0076175B /* ViewController.swift in Sources */,
 				8941920220C52C5E0076175B /* AppDelegate.swift in Sources */,
 			);
@@ -432,6 +478,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 688A5ZS9PE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RealmAgain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +500,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 688A5ZS9PE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RealmAgain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
